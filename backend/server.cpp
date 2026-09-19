@@ -3,6 +3,7 @@
 #include "encoder/HuffmanEncoder.h"
 #include "decoder/HuffmanDecoder.h"
 
+#include <cstdlib>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -405,9 +406,10 @@ int main()
     std::cout
         << "Compression endpoint: POST /compress\n";
 
-    server.listen(
-        "localhost",
-        8080);
+    const char *portEnv = std::getenv("PORT");
+    int port = portEnv ? std::stoi(portEnv) : 8080;
+
+    server.listen("0.0.0.0", port);
 
     return 0;
 }
