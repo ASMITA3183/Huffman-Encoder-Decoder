@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Huffman Compressor</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Huffman<span>.</span></div>
+
+      <div class="nav-subtitle">File Compressor</div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">LOSSLESS FILE COMPRESSION</p>
+
+        <h1>
+          Compress files with
+          <span>Huffman Coding</span>
+        </h1>
+
+        <p class="description">
+          Reduce file size using Huffman coding without losing any data.
+        </p>
+      </section>
+
+      <section class="workspace">
+        <!-- Compress Card -->
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2>Compress</h2>
+
+              <p>Convert your file into a compressed .huff file.</p>
+            </div>
+
+            <div class="card-icon">↑</div>
+          </div>
+
+          <div class="drop-zone" id="compressDropZone">
+            <div class="upload-icon">↑</div>
+
+            <h3>Drop your file here</h3>
+
+            <p>or click to browse</p>
+
+            <input type="file" id="compressFileInput" hidden />
+
+            <button class="browse-button" id="compressBrowseButton">
+              Choose File
+            </button>
+
+            <p class="selected-file" id="compressSelectedFile"></p>
+          </div>
+
+          <button class="primary-button" id="compressButton" disabled>
+            Compress File
+          </button>
+        </div>
+
+        <!-- Decompress Card -->
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2>Decompress</h2>
+
+              <p>Restore your original file from a .huff file.</p>
+            </div>
+
+            <div class="card-icon">↓</div>
+          </div>
+
+          <div class="drop-zone" id="decompressDropZone">
+            <div class="upload-icon">↓</div>
+
+            <h3>Drop a .huff file here</h3>
+
+            <p>or click to browse</p>
+
+            <input type="file" id="decompressFileInput" accept=".huff" hidden />
+
+            <button class="browse-button" id="decompressBrowseButton">
+              Choose File
+            </button>
+
+            <p class="selected-file" id="decompressSelectedFile"></p>
+          </div>
+
+          <button class="secondary-button" id="decompressButton" disabled>
+            Decompress File
+          </button>
+        </div>
+      </section>
+
+      <!-- Status -->
+
+      <section class="status" id="status">
+        <div class="status-indicator" id="statusIndicator"></div>
+
+        <p id="statusText">Select a file to get started.</p>
+      </section>
+
+      <!-- Information -->
+
+      <section class="info">
+        <div class="info-item">
+          <strong> Lossless </strong>
+
+          <span> Your original data is preserved. </span>
+        </div>
+
+        <div class="info-item">
+          <strong> Any File </strong>
+
+          <span> Text, images, PDFs and more. </span>
+        </div>
+
+        <div class="info-item">
+          <strong> .huff </strong>
+
+          <span> Custom Huffman file format. </span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with C++ & Huffman Coding</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

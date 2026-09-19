@@ -1,0 +1,17 @@
+# Compiled executables
+backend/server
+backend/huffman
+
+# Temporary upload/output folders
+backend/input/*
+backend/output/*
+
+# Generated compressed files
+*.huff
+*.huf
+
+# Generated test output
+backend/test/restored.txt
+
+# macOS
+.DS_Store
